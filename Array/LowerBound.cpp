@@ -10,7 +10,7 @@ int main()
     
     int low=0;
     int high=n-1;
-    int target=100;
+    int target=25;
     bool found = false;
     
     while(low<=high){
