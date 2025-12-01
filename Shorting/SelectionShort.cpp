@@ -3,6 +3,10 @@ using namespace std;
 
 int main()
 {
+    // selection sort algorithm 
+    // HOW IT WORKS
+    // it works by repeatedly finding the minimum element from unsorted part and putting it at the beginning
+    // it maintains two subarrays in a given array
     // time complexity in worst case -> big o f n^2
     // time comlexity in best case -> big o f n
 
