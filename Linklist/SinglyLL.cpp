@@ -12,15 +12,7 @@ class Node{
     }
 };
 
-int size=0;
-void display(Node *temp){
-    while(temp != nullptr){
-        cout<<temp->data<<" -> ";
-        size++;
-        temp=temp->next;
 
-    }
-}
 
 
 class linkedlist{   
@@ -92,8 +84,16 @@ class linkedlist{
         return count;
     }
 
-};
+    void display(){
+        Node *temp=head;
+        while(temp != nullptr){
+            cout<<temp->data<<" -> ";
+            temp=temp->next;
 
+        }
+}
+
+};
 
 
 int main(){
@@ -104,10 +104,7 @@ int main(){
     ls.InsertAtLast(50);
     ls.InsertAtLast(60);
     ls.InsertAtLast(70);
-    ls.InsertAtMiddle(-1,79);
-    
-    
-    display(ls.head);
+    ls.display();
 
     
     
