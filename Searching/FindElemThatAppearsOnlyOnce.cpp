@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
 
-    int arr[] = {1,1,2,2,4,4,5,5,7,7,9,11,11,15,15};
+    int arr[] = {1,1,2,2,4,4,5,5,7,7,9,9,11,11,14,15,15};
     int n = sizeof(arr)/sizeof(arr[0]);
     
     int low = 0;
@@ -16,21 +16,29 @@ int main(){
     if(arr[0]!=arr[1]){
         cout<<"Ans : "<<arr[0];
     }
-    if(arr[n]!=arr[n-1]){
+    if(arr[n-1]!=arr[n-2]){
         cout<<"Ans : "<<arr[n];
     }
     
     while (low<=high)
     {   
         int mid = (low+high)/2;
-        if (arr[mid]!=arr[mid+1] || arr[mid]!=arr[mid-1])
+        if (arr[mid]!=arr[mid+1] && arr[mid]!=arr[mid-1])
         {
-           cout<<"Ans : "<<mid;
-        }else if (((mid-1)-low )%2==0)
-        {
-            low=mid+1;
+           cout<<"Ans : "<<arr[mid]<<endl;
+        }
+
+        int first=mid,second=mid;
+        if(arr[mid]==arr[mid-1]){
+            first=mid-1;
         }else{
-            high=mid-1;
+            second =mid+1;
+        }
+
+        if((first-low)%2==0){
+            low=second+1;
+        }else{
+            high= first-1;
         }
         
         
