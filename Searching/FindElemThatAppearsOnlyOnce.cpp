@@ -3,7 +3,8 @@ using namespace std;
 
 int main(){
 
-    int arr[] = {1,1,2,2,4,4,5,5,7,7,9,9,11,11,14,15,15};
+    // find element that appears only once in a sorted array where every other element appears twice
+    int arr[] = {1,1,2,2,4,4,5,5,7,7,9,11,11,15,15};
     int n = sizeof(arr)/sizeof(arr[0]);
     
     int low = 0;
